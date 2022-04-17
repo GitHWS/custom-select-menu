@@ -51,16 +51,20 @@ ul {
   cursor: pointer;
 }
 
-.selected::after {
+.arrow {
   display: block;
   float: right;
   margin-top: 3px;
-  content: "";
   width: 10px;
   height: 10px;
   background-image: url(../images/icon-Triangle-down.png);
+  background-position: center;
   background-size: 10px 10px;
   background-repeat: no-repeat;
+}
+
+.arrow.clicked {
+  background-image: url(../images/icon-Triangle-up.png);
 }
 
 .selected:focus {

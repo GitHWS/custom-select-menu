@@ -10,7 +10,9 @@
   <body>
     <div class="container">
       <div class="select-box">
-        <div class="selected clear_fix">최애 프로그래밍 언어</div>
+        <div class="selected clear_fix">
+          최애 프로그래밍 언어<span class="arrow"></span>
+        </div>
         <ul class="option-container">
           <li class="option">
             <input type="radio" class="radio" id="Python" name="category" />
@@ -37,11 +39,13 @@
     </div>
     <script>
       const selectedBtn = document.querySelector(".selected");
+      const activeBtn = document.querySelector(".selected .active");
 
       selectedBtn.setAttribute("tabindex", "-1");
       selectedBtn.addEventListener("click", (e) => {
         e.target.focus();
         document.querySelector(".option-container").classList.toggle("active");
+        document.querySelector(".arrow").classList.toggle("clicked");
       });
     </script>
   </body>
