@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.clear_fix::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+ul {
+  list-style: none;
+}
+
+.select-box {
+  width: 200px;
+}
+
+.select-box .option-container {
+  opacity: 0;
+  padding: 4px 0;
+  width: 200px;
+  box-shadow: 0 0 0 1px #c4c4c4, 4px 4px 14px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.4s;
+}
+
+.select-box .option-container.active {
+  opacity: 1;
+}
+
+.selected {
+  padding: 12px 14px;
+  margin-bottom: 13px;
+  box-shadow: 0 0 0 1px #c4c4c4;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.selected::after {
+  display: block;
+  float: right;
+  margin-top: 3px;
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-image: url(/asset/images/icon-Triangle-down.png);
+  background-size: 10px 10px;
+  background-repeat: no-repeat;
+}
+
+.selected:focus {
+  border-color: #9b51e0;
+  box-shadow: 0 0 0 1px #9b51e0, 0 0 0 4px #f8e4ff;
+}
+
+.select-box .option {
+  width: 200px;
+  padding: 5px 8px;
+  cursor: pointer;
+}
+
+.select-box label {
+  display: block;
+  padding: 7px 10px;
+  /* width: 100%; */
+  border-radius: 8px;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.select-box label:hover {
+  background-color: #f8e4ff;
+}
+
+.select-box .option .radio {
+  display: none;
+}
