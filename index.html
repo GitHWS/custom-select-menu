@@ -41,7 +41,7 @@
       const selectedBtn = document.querySelector(".selected");
       const activeBtn = document.querySelector(".selected .active");
 
-      selectedBtn.setAttribute("tabindex", "-1");
+      selectedBtn.setAttribute("tabindex", "0");
       selectedBtn.addEventListener("click", (e) => {
         e.target.focus();
         document.querySelector(".option-container").classList.toggle("active");
